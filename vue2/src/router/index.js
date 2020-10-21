@@ -14,15 +14,15 @@ const routes = [
         path: 'props-$emit',
         name: 'props-$emit',
         component: () => import('../../博客/组件通信/props-$emit/index.vue'),
-      }
-    ]
-  }
+      },
+    ],
+  },
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
 })
 
 export default router

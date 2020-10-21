@@ -31,18 +31,18 @@
 
 <script>
 export default {
-  name: "Item",
-  props: ["menu", "parent"],
+  name: 'Item',
+  props: ['menu', 'parent'],
   data() {
-    return {};
+    return {}
   },
   methods: {
-      jump(path) {
-        if(this.$route.path === path){
-          return
-        }
-          this.$router.push(path)
+    jump(path) {
+      if (this.$route.path === path) {
+        return
       }
+      this.$router.push(path)
+    },
   },
-};
+}
 </script>

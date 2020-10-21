@@ -12,14 +12,14 @@
 </template>
 
 <script>
-import Menu from "./components/index";
-import Home from "./components/home"
+import Menu from './components/index'
+import Home from './components/home'
 export default {
   components: {
     Menu,
     Home,
   },
-};
+}
 </script>
 
 <style lang="scss">
