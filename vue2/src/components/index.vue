@@ -26,4 +26,15 @@ export default {
 .el-menu-vertical-demo {
   border: 0;
 }
+/deep/ .el-submenu {
+  /deep/ .el-menu-item {
+    height: 32px;
+    line-height: 32px;
+  }
+}
+
+/deep/ .el-submenu__title {
+  height: 32px;
+  line-height: 32px;
+}
 </style>

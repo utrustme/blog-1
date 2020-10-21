@@ -36,6 +36,7 @@ export default {
 }
 .left {
   height: 100vh;
+  padding: 12px 0;
   overflow: scroll;
   background-color: #545c64;
   &::-webkit-scrollbar {
