@@ -13,7 +13,7 @@ const routes = [
       {
         path: 'props-$emit',
         name: 'props-$emit',
-        component: () => import('../../博客/组件通信/props-$emit/index.vue'),
+        component: () => import('../../博客/组件通信/props-$emit/parent.vue'),
       },
     ],
   },
