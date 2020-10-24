@@ -7,6 +7,7 @@
       background-color="#545c64"
       text-color="#fff"
       active-text-color="#ffd04b"
+      :collapse="true"
     >
       <Item :menu="$router.options.routes" />
     </el-menu>
@@ -25,6 +26,7 @@ export default {
 <style lang="scss" scoped>
 .el-menu-vertical-demo {
   border: 0;
+  width: 100%;
 }
 /deep/ .el-submenu {
   /deep/ .el-menu-item {

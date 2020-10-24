@@ -2,8 +2,9 @@
   <div class="parent">
     <h3>this is parent component</h3>
     <input type="text" v-model="message" />
+    <input type="button" value="获取子组件消息" @click="getMessage" />
     <p>收到来自子组件的消息：{{ messageFromChild }}</p>
-    <Child :messageFromParent="message" @on-receive="receive" />
+    <Child ref="childRef" />
   </div>
 </template>
 
@@ -17,12 +18,17 @@ export default {
       messageFromChild: '',
     }
   },
+  methods: {
+    getMessage() {
+      this.messageFromChild = this.$refs.childRef.message
+    },
+  },
   components: {
     Child,
   },
-  methods: {
-    receive(msg) {
-      this.messageFromChild = msg
+  watch: {
+    message(newValue) {
+      this.$refs.childRef.messageFromParent = newValue
     },
   },
 }

@@ -1,9 +1,9 @@
 <template>
   <div class="containerB">
     <h3>this is CompB</h3>
-    <input type="text" v-model="message" @keyup="sendMessage" />
-    <p v-show="messageFromBus && sender !== $options.name">
-      收到{{ sender }}的消息：{{ messageFromBus }}
+    <input type="text" v-model="message" />
+    <p v-show="messageFromStore && sender !== $options.name">
+      收到{{ sender }}的消息：{{ messageFromStore }}
     </p>
     <CompC />
     <CompD />
@@ -22,22 +22,21 @@ export default {
   data() {
     return {
       message: '',
-      messageFromBus: '',
-      sender: '',
     }
   },
-  mounted() {
-    this.$bus.$on('sendMessage', (obj) => {
-      const { sender, message } = obj
-      this.sender = sender
-      this.messageFromBus = message
-    })
+  computed: {
+    messageFromStore() {
+      return this.$store.state.message.content
+    },
+    sender() {
+      return this.$store.state.message.sender
+    },
   },
-  methods: {
-    sendMessage() {
-      this.$bus.$emit('sendMessage', {
+  watch: {
+    message(newValue) {
+      this.$store.commit('sendMessage', {
         sender: this.$options.name,
-        message: this.message,
+        content: newValue,
       })
     },
   },

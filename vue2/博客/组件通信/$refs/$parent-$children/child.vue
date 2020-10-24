@@ -1,25 +1,18 @@
 <template>
   <div class="child">
     <h4>this is child component</h4>
-    <input type="text" v-model="message" @keyup="send" />
-    <p>收到来自父组件的消息：{{ messageFromParent }}</p>
+    <input type="text" v-model="message" />
+    <p>收到来自父组件的消息：{{ $parent.message }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Child',
-  props: ['messageFromParent', 'receive'],
+  name: 'Child1',
   data() {
     return {
       message: '',
     }
-  },
-  methods: {
-    send() {
-      console.log(this.message)
-      this.$emit('on-receive', this.message)
-    },
   },
 }
 </script>

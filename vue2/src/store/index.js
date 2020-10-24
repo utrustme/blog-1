@@ -4,8 +4,20 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
+  state: {
+    message: {
+      sender: '',
+      content: '',
+    },
+  },
+  mutations: {
+    sendMessage(state, obj) {
+      state.message = {
+        sender: obj.sender,
+        content: obj.content,
+      }
+    },
+  },
   actions: {},
   modules: {},
 })

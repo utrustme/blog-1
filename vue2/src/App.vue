@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <el-row class="container">
+    <el-row class="app-container">
       <el-col :span="4" class="left">
         <Menu></Menu>
       </el-col>
@@ -31,7 +31,7 @@ export default {
 .body {
   height: 100vh;
 }
-.container {
+.app-container {
   height: 100vh;
 }
 .left {
