@@ -9,7 +9,7 @@
 <script>
 export default {
   name: 'Child',
-  props: ['messageFromParent', 'receive'],
+  props: ['messageFromParent'],
   data() {
     return {
       message: '',
