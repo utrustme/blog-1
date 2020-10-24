@@ -17,7 +17,6 @@ export default {
   },
   methods: {
     send() {
-      console.log(this.message)
       this.$emit('on-receive', this.message)
     },
   },

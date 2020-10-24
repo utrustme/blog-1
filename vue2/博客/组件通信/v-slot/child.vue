@@ -8,11 +8,6 @@
 <script>
 export default {
   name: 'Child',
-  data() {
-    return {
-      message: '2222',
-    }
-  },
 }
 </script>
 
