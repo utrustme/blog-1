@@ -14,7 +14,7 @@ export default {
   name: 'Parent',
   data() {
     return {
-      message: '梨香',
+      message: '',
       messageFromChild: '',
     }
   },

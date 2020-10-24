@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       message: {
-        content: '梨香',
+        content: '',
       },
     }
   },

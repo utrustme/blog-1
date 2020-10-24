@@ -13,7 +13,7 @@ export default {
   name: 'CompA',
   data() {
     return {
-      message: '梨香',
+      message: '',
       messageFromComp: '',
       comp: '',
     }
